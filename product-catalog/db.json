@@ -1,0 +1,76 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Смарт-часы X100",
+      "price": 7490,
+      "category": "Гаджеты",
+      "image": "https://via.placeholder.com/200?text=Smart+Watch",
+      "description": "Водонепроницаемые, GPS, 7‑дневный аккумулятор. Следите за пульсом и сном."
+    },
+    {
+      "id": 2,
+      "title": "Наушники SuperSound",
+      "price": 3500,
+      "category": "Аудио",
+      "image": "https://via.placeholder.com/200?text=Headphones",
+      "description": "Беспроводные, шумоподавление, 20ч работы. Чистый звук и глубокие басы."
+    },
+    {
+      "id": 3,
+      "title": "Ноутбук WorkPro 15",
+      "price": 54990,
+      "category": "Ноутбуки",
+      "image": "https://via.placeholder.com/200?text=Laptop",
+      "description": "Intel Core i5, 16GB RAM, 512GB SSD. Идеален для работы и учёбы."
+    },
+    {
+      "id": 4,
+      "title": "Смартфон Galaxy S22",
+      "price": 69990,
+      "category": "Смартфоны",
+      "image": "https://via.placeholder.com/200?text=Galaxy+S22",
+      "description": "128GB, AMOLED экран, отличная камера. В наличии все цвета."
+    },
+    {
+      "id": 5,
+      "title": "Планшет Tab Ultra",
+      "price": 29990,
+      "category": "Планшеты",
+      "image": "https://via.placeholder.com/200?text=Tablet",
+      "description": "10.5 дюймов, 64GB, поддержка стилуса. Для рисования и заметок."
+    },
+    {
+      "id": 6,
+      "title": "Фитнес-браслет FitBand",
+      "price": 1990,
+      "category": "Гаджеты",
+      "image": "https://via.placeholder.com/200?text=FitBand",
+      "description": "Шагомер, пульсометр, уведомления. Работает до 14 дней."
+    },
+    {
+      "id": 7,
+      "title": "Клавиатура Mechanic",
+      "price": 3990,
+      "category": "Аксессуары",
+      "image": "https://via.placeholder.com/200?text=Keyboard",
+      "description": "Механическая, RGB подсветка, для геймеров и печати."
+    },
+    {
+      "id": 8,
+      "title": "Мышь Wireless",
+      "price": 1290,
+      "category": "Аксессуары",
+      "image": "https://via.placeholder.com/200?text=Mouse",
+      "description": "Беспроводная, 3 режима DPI, тихие кнопки."
+    },
+    {
+      "id": 9,
+      "title": "Внешний аккумулятор 20000mAh",
+      "price": 2490,
+      "category": "Аксессуары",
+      "image": "https://via.placeholder.com/200?text=Powerbank",
+      "description": "Быстрая зарядка, два порта, для телефонов и планшетов."
+    }
+  ]
+}

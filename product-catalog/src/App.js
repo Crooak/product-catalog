@@ -1,50 +1,33 @@
 import { useState, useEffect } from 'react';
 import ProductCard from './components/ProductCard';
-import Modal from './components/Modal'; // новый импорт
+import Modal from './components/Modal';
 import './App.css';
 
 function App() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [searchTerm, setSearchTerm] = useState(''); // для поиска
-  const [isModalOpen, setIsModalOpen] = useState(false); // для модалки
+  const [searchTerm, setSearchTerm] = useState('');
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   useEffect(() => {
-    const fetchProducts = () => {
-      setTimeout(() => {
-        const data = [
-          {
-            id: 1,
-            title: "Смарт-часы X100",
-            price: 7490,
-            category: "Гаджеты",
-            image: "https://via.placeholder.com/200?text=Watch",
-            description: "Водонепроницаемые, GPS, 7‑дневный аккумулятор"
-          },
-          {
-            id: 2,
-            title: "Наушники SuperSound",
-            price: 3500,
-            category: "Аудио",
-            image: "https://via.placeholder.com/200?text=Headphones",
-            description: "Беспроводные, шумоподавление, 20ч работы"
-          }
-        ];
+    // Реальный fetch к json-server
+    fetch('http://localhost:5000/products')
+      .then(response => response.json())
+      .then(data => {
         setProducts(data);
         setLoading(false);
-      }, 1000);
-    };
-
-    fetchProducts();
+      })
+      .catch(error => {
+        console.error('Ошибка загрузки:', error);
+        setLoading(false);
+      });
   }, []);
 
-  // Фильтрация товаров
   const filteredProducts = products.filter(product =>
     product.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // Функции для модалки
   const openModal = (product) => {
     setSelectedProduct(product);
     setIsModalOpen(true);
@@ -62,7 +45,6 @@ function App() {
   return (
     <div className="App">
       <h1>Каталог товаров</h1>
-      {/* Поле поиска */}
       <input
         type="text"
         placeholder="Поиск по названию..."
@@ -80,12 +62,11 @@ function App() {
             image={product.image}
             description={product.description}
             category={product.category}
-            onCardClick={openModal} // передаём функцию
+            onCardClick={openModal}
           />
         ))}
       </div>
 
-      {/* Модальное окно */}
       <Modal
         isOpen={isModalOpen}
         onClose={closeModal}
