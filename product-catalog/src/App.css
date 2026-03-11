@@ -1,6 +1,32 @@
+.App {
+  padding: 16px;
+  text-align: center;
+}
+
 .product-list {
   display: flex;
-  gap: 16px;
   flex-wrap: wrap;
+  gap: 16px;
   justify-content: center;
+  margin-top: 20px;
+}
+
+/* Планшеты */
+@media (max-width: 768px) {
+  .product-list {
+    gap: 12px;
+  }
+}
+
+/* Мобильные */
+@media (max-width: 480px) {
+  .product-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-card {
+    width: 100%;
+    max-width: 300px;
+  }
 }
